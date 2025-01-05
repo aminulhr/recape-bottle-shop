@@ -4,7 +4,7 @@ const Botle = ({ bottle, handaladdbottle }) => {
   const { name, price, img } = bottle;
   return (
     <div>
-      <div>
+      <div className="singel-bollte">
         <h3>{name} </h3>
         <h6>Price {price} </h6>
         <img className="bottle" src={img} alt="" srcSet="" />
