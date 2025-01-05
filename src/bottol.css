@@ -1,0 +1,12 @@
+.bottle {
+  width: 150px;
+  height: 200px;
+}
+
+.all-bollte {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+}
