@@ -4,7 +4,7 @@ import Botle from "./Botle";
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
   const [addTOcard, setaddTocard] = useState([]);
-  const handaladdbottle = () => {
+  const handaladdbottle = (bottle) => {
     const newadded = [...addTOcard, bottle];
     setaddTocard(newadded);
   };
@@ -17,9 +17,10 @@ const Bottles = () => {
   return (
     <div>
       <h1>WelCome To Our Shop </h1>
-      <div>
+      <div className="card-bottle">
+        <h3>Total Added: {addTOcard.length} </h3>
         {addTOcard.map((bottle) => (
-          <Botle key={bottle.id} bottle={bottle}></Botle>
+          <img src={bottle.img} alt="" srcSet="" />
         ))}
       </div>
       <div className="all-bollte">
@@ -28,9 +29,7 @@ const Bottles = () => {
             key={bottle.id}
             bottle={bottle}
             handaladdbottle={handaladdbottle}
-          >
-            {" "}
-          </Botle>
+          ></Botle>
         ))}
       </div>
     </div>
